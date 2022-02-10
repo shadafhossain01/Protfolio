@@ -1,0 +1,983 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+:root {
+  --primary-color: rgb(0, 255, 191);
+
+  --open: "Open Sans Condensed", sans-serif;
+
+  --roboto: "Roboto Condensed", sans-serif;
+}
+
+html,
+body {
+  background-color: #202020;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+
+  background-color: #202020;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--primary-color);
+  height: 25px;
+border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+
+/* *****************************
+                  header css
+-********************************/
+
+.header {
+  padding: 14px 0px;
+  display: flex;
+  align-items: center;
+}
+.header .navbar-brand span {
+  color: var(--primary-color);
+  font-family: "Sacramento", cursive;
+  font-size: 40px;
+}
+
+.header ul li a {
+  color: white !important;
+  font-size: 18px;
+  margin: 0px 11px;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+
+.header ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 0%;
+  height: 3px;
+
+  background-color: var(--primary-color);
+  transition: all 0.5s ease;
+}
+
+.header ul li a:hover::before {
+  width: 100%;
+}
+
+.header ul li a:hover {
+  color: var(--primary-color) !important;
+}
+
+.header ul li .active {
+  color: var(--primary-color) !important;
+}
+ button {
+  border: 1px solid var(--primary-color) !important;
+
+  outline: none !important;
+  display: block;
+  padding: 10px 15px !important;
+  cursor: pointer;
+}
+
+.btn-1 {
+  color: rgb(255, 255, 255) !important;
+  font-family: var(--roboto);
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
+
+}
+
+.btn-1::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height:0%;
+  background-color: var(--primary-color);
+ bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  transition: all 0.4s linear;
+
+ 
+}
+.btn-1:hover{
+  color: black !important;
+  font-weight: 500;
+
+}
+
+.btn-1:hover::after{
+  height: 100%;
+  z-index: -1;
+}
+
+
+
+.stick{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 99999;
+  padding: 0;
+  
+}
+/* *****************************
+                  banner  css
+-********************************/
+
+.banner {
+  padding: 100px 0px;
+  overflow: hidden;
+
+
+}
+.ban-left {
+  display: flex;
+  align-items: center;
+padding-left: 70px;
+}
+.ban-left h1 {
+  color: white;
+  font-size: 80px;
+}
+
+.ban-left h1 span {
+  color: var(--primary-color);
+  font-size: 40px;
+  font-family: var(--open);
+}
+.ban-left h3 {
+  color: white;
+  margin-top: 20px;
+  position: relative;
+  font-family: var(--roboto);
+}
+
+.ban-left h3::after {
+  width: 20%;
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: var(--primary-color);
+  bottom: -86%;
+  left: 26%;
+}
+.ban-left button {
+  margin-top: 80px;
+  padding: 15px 15px;
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.banner .main{
+  position: relative;
+}
+
+
+.banner .main img{
+  margin-top: 20px;
+  transform: scale(1.7);
+}
+
+.banner .sc-icon{
+  position: absolute;
+  right: 1%;
+  top: 30%;
+}
+
+.sc-icon i{
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color:#000;
+  border-radius: 100%;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.sc-icon i:hover{
+  transform: rotate(330deg);
+  background-color: #202020;
+  color: var(--primary-color);
+}
+
+/* *****************************
+                  expert  css
+-********************************/
+.expert {
+  width: 100%;
+  padding: 60px 0px;
+  margin-top: 50px;
+}
+
+.expert h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 80px;
+  font-size: 60px;
+  position: relative;
+ 
+font-family: var(--roboto);
+}
+.expert .boot img{
+  margin-top: 17px;
+  width: 92%;
+}
+.expert .js img{
+  margin-top: 28px;
+}
+
+.expert .wood img{
+  width: 46%;
+  margin-top: 47px;
+}
+.expert .jq img{
+  width: 90%;
+  margin-top: 20px;
+}
+
+.expert .go img{
+  margin-top: 70px;
+  width: 70%;
+}
+
+.expert .php img{
+  margin-top: 30px;
+}
+
+.expert .down img{
+  margin-top: 45px;
+}
+
+.expert .my img{
+  margin-top: -45px;
+}
+.expert .owl-nav{
+  display: none;
+}
+.owl-dots .active span {
+  background-color: var(--primary-color) !important;
+  }
+.expert button{
+  border: none !important;
+}
+
+.expert h2::after{
+  position: absolute;
+  content: "";
+  width: 8%;
+  height: 4px;
+  background-color: var(--primary-color);
+  bottom: -21%;
+  left: 47%;
+}
+
+/* -----------------
+        service
+--------------------*/
+.service{
+ 
+  padding: 70px 0px;
+}
+.service h2{
+  color: white;
+  text-align: center;
+  font-family: var(--roboto);
+  font-size: 40px;
+  margin-bottom: 110px;
+  line-height: 55px;
+  position: relative;
+}
+.service h2::after{
+content: "";
+position: absolute;
+  width: 8%;
+  height: 4px;
+  background-color: var(--primary-color);
+  bottom: -21%;
+  left: 47%;
+}
+
+.service-item{
+border: 1px solid white;
+padding:50px 40px ;
+text-align: center;
+margin-bottom: 35px;
+transition: all 0.3s linear;
+}
+.service-item span{
+  display: block;
+}
+
+
+.service-item i{
+
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid var(--primary-color);
+  line-height: 60px;
+}
+
+.service-item span{
+  color: white;
+  font-family: var(--open);
+  margin: 25px 0px;
+  font-size: 30px;
+}
+
+.service-item p{
+  color: white;
+  text-align: left;
+  font-family: var(--roboto);
+}
+
+.service-item:hover{
+  border: 1px solid var(--primary-color);
+  transform: scale(1.1);
+  background-color: black;
+}
+
+.service-item:hover i{
+  color: var(--primary-color);
+  border: 1px solid white;
+}
+
+/* ***************
+        setisfiction css
+******************/
+.setisfiction{
+  width: 100%;
+ 
+  padding: 100px 0px;
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1.1)),url(../img/sebastian-herrmann-NbtIDoFKGO8-unsplash.jpg);
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:  top center;
+  display: flex;
+  align-items: center;
+}
+
+.setisfiction span{
+  color: var(--primary-color) !important;
+  text-align: center;
+  display: block;
+  font-family: var(--open);
+ font-size: 60px;
+}
+
+.setisfiction h4{
+  color: white;
+  text-align: center;
+  font-family: var(--roboto);
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+
+
+/* ***************
+        skill css
+******************/
+
+
+.skill{
+  width: 100%;
+  padding: 75px 0px;
+}
+
+
+
+.skill h2{
+  color: white;
+  font-family: var(--open);
+  font-size: 50px;
+  margin-bottom: 45px;
+  position: relative;
+}
+.skill h2::after{
+  position: absolute;
+  content: "";
+  width: 11%;
+  height: 3px;
+  background-color: var(--primary-color);
+  bottom: 7px;
+  left: 84px;
+}
+
+.progress{
+  margin: 25px 0px;
+ }
+
+.skill-right h4{
+  color: white !important;
+}
+
+.skill .bg{
+  background-color: var(--primary-color);
+}
+.skill-left img{
+  transform: scale(1.5);
+  margin-top: 113px;
+  
+}
+
+
+
+/* *****************
+protfolio css
+**********************/
+
+.protfolio{
+  width: 100%;
+
+}
+.protfolio h3{
+  margin-top: 25px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: "Open Sans Condensed";
+    margin-bottom: 60px;
+    line-height: 50px;
+    position: relative;
+}
+
+.protfolio h3::after{
+  position: absolute;
+  content: "";
+  background-color: var(--primary-color);
+  width: 6%;
+  height: 4px;
+  bottom: -10%;
+  left: 47%;
+}
+
+.btn-up ul{
+  padding-left: 0px;
+  text-align: center;
+}
+.btn-up ul li{
+  list-style: none;
+  display: inline-block;
+  color: white;
+  font-family: var(--roboto);
+  font-size: 23px;
+  margin-right: 23px;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-up .tab-active{
+position: absolute;
+content: "";
+width: 100%;
+height: 3px;
+background-color: var(--primary-color);
+bottom: -7%;
+left: 0%;
+
+
+}
+
+.protfolio .card {
+  height: 100%;
+  min-height: 450px;
+  overflow: hidden; 
+  box-shadow: 0px 0px 0px 4px var(--primary-color);
+  cursor: pointer;
+  border: 1px solid white;
+margin-top: 50px;
+}
+
+.protfolio .card a{
+  transition: background-position 2s ease-in-out 0s;
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+  background-size: cover;
+ 
+}
+
+.protfolio .card:hover a{
+  background-position: bottom center;
+}
+.protfolio .card  .e-commerce{
+  background-image: url(../img/ecommerce1.png);
+}
+
+
+.protfolio .card .e-commerce01{
+  background-image: url(../img/e01.png);
+}
+
+
+.protfolio .card .food1{
+  background-image:url(../img/food1.png);
+}
+
+.protfolio .card .food2{
+  background-image: url(../img/food3.png);
+}
+.protfolio .card .food3{
+background-image: url(../img/food4.png);
+}
+
+.protfolio .card .food4{
+  background-image: url(../img/sushi.png);
+}
+
+.protfolio .card .food5{
+  background-image: url(../img/fblack.png);
+}
+
+.protfolio .card .food6{
+  background-image: url(../img/sneaky.png);
+}
+
+
+
+.protfolio .card .travel1{
+background-image: url(../img/travel1.png);
+}
+
+.protfolio .card .travel2{
+  background-image: url(../img/travel2.png);
+}
+
+.protfolio .card .travel3{
+  background-image: url(../img/music.png);
+}
+.protfolio .card .travel4{
+  background-image: url(../img/moun.png);
+}
+
+
+
+
+.protfolio .card .service1{
+  background-image: url(../img/service.png);
+}
+.protfolio .card .service2{
+  background-image: url(../img/service2.png);
+}
+.protfolio .card .service3{
+  background-image: url(../img/service3.png);
+}
+
+.protfolio .card .service4{
+  background-image: url(../img/technology.png);
+}
+
+.protfolio .card .service5{
+  background-image: url(../img/taxi.png);
+}
+
+.protfolio .card .service6{
+  background-image: url(../img/oud.png);
+}
+
+
+/* *****************
+           client css
+**********************/
+.client{
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+.client-item{
+  padding: 50px 20px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 15px;
+
+}
+.client h2{
+  text-align: center;
+  color: white;
+  margin-bottom: 100px;
+font-family: var(--open);
+font-size: 45px;
+position: relative;
+}
+
+.client h2::after{
+  position: absolute;
+  content: "";
+  width: 11%;
+  height: 3px;
+  background-color: var(--primary-color);
+  bottom: -29%;
+  left: 44%;
+}
+
+.client-item img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+ 
+}
+
+.client-item h3{
+  
+  color:rgb(255, 255, 255)!important;
+}
+.client-item i{
+  color: var(--primary-color);
+  margin-bottom: 25px;
+
+}
+
+.client-item p{
+  margin-bottom: 40px;
+  color: white;
+}
+
+.client-item h4{
+  color: var(--primary-color);
+}
+
+
+
+/* *****************************************
+                    project css
+******************************************/
+
+.project{
+  width: 100%;
+  padding: 130px 0px;
+  background-image: linear-gradient(rgba(0,0,0,-1.5),rgba(0,0,0,5)),url(../img/bg3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+
+.project h2{
+  font-family: var(--open);
+  font-size: 55px;
+  color: white;
+}
+
+
+.project h2 span{
+  color: var(--primary-color);
+}
+
+
+.btn-2{
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
+}
+.btn-2::after{
+  position: absolute;
+  content: "";
+ top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.5s linear;
+  background-color: var(--primary-color);
+
+}
+.btn-2:hover{
+  color:  black!important;
+  font-weight: 500;
+}
+
+
+.btn-2:hover::after{
+  width: 100%;
+  z-index: -1;
+
+}
+
+
+/* *****************************************
+               contact  css
+******************************************/
+.contact{
+  padding: 90px 0px;
+  margin-bottom: 0px;
+}
+
+.contact h2{
+  text-align: center;
+  color: white;
+  font-family: var(--open);
+  font-size: 45px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.contact h2::after{
+  position: absolute;
+    content: "";
+    width: 11%;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: -10px;
+    left: 45%;
+}
+
+.contact-right div{
+  margin: 25px 0px !important;
+}
+
+.contact-right form{
+  margin-top: 20px;
+}
+
+.contact-right input  {
+  background-color: #0000006b;
+border: none;
+border-bottom: 1px solid var(--primary-color);
+
+}
+.contact-right .name{
+  position: relative;
+}
+.contact-right .name i{
+  position: absolute;
+  right: 2%;
+  top: 25%;
+}
+
+.contact-right input::placeholder{
+  color: white !important;
+}
+.contact-right input:focus{
+background-color: transparent;
+  
+border:1px solid var(--primary-color) ;
+  color: white;
+
+  caret-color: var(--primary-color);
+ 
+}
+.contact-right select option{
+  color: white;
+  background-color: #0000006b;
+}
+
+
+.contact-right select {
+  background-color: #0000006b;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  color: white;
+  margin-bottom: 15px;
+  }
+
+
+  .contact-right select:focus{
+    background-color: #202020;
+  
+ 
+    color: white;
+
+    caret-color: var(--primary-color);
+  }
+
+  .contact-right textarea {
+    background-color: #0000006b;
+    border: 1px solid var(--primary-color) ;
+    margin-top: 20px;
+      
+    }
+
+    .contact-right textarea::placeholder{
+      color: white;
+      font-size: 22px;
+      font-family: var(--roboto);
+    }
+
+    .contact-right textarea:focus{
+      color: white;
+   
+   border: 2px solid var(--primary-color) !important;
+
+
+  caret-color: var(--primary-color);
+    }
+    .contact-right i{
+      color: white;
+    }
+
+    .contact iframe{
+     width: 600px;
+     height: 700px;
+    }
+
+/* *****************************************
+               footer  css
+******************************************/
+footer{
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #202020;
+  display: flex;
+  align-items: center;
+}
+
+footer .f-left  h3{
+  color: var(--primary-color);
+  font-family: "Sacramento", cursive;
+  font-size: 60px;
+}
+
+footer .f-left  p{
+  color: white;
+  width: 90%;
+  font-size: 20px;
+}
+
+footer .foot-sc-icon i{
+margin-top: 20px;
+  width: 50px;
+  height: 50px;
+ background-color: #202020;
+  border-radius: 100%;
+ color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  transition: all 0.5s linear;
+  margin-right: 5px;
+  border: 1px solid white;
+}
+footer .foot-sc-icon i:hover{
+  background-color: var(--primary-color);
+}
+
+
+footer .f-mid h4{
+  color: white;
+  font-family: var(--open);
+font-size: 40px;
+margin-bottom: 30px;
+}
+
+footer .sub{
+  position: relative;
+}
+footer .sub input{
+  outline: none;
+  border: none;
+  width: 82%;
+  background: none;
+  padding: 11px 16px;
+  border: 1px solid var(--primary-color);
+}
+footer .sub input::placeholder{
+  color: white;
+}
+footer .sub input:focus{
+ caret-color: var(--primary-color);
+ color: white;
+
+}
+
+footer .sub i{
+  position: absolute;
+  color: rgb(0, 0, 0);
+  right: 18%;
+  top: 4%;
+  font-size: 19px;
+  background: var(--primary-color);
+  padding: 13px;
+  cursor: pointer;
+}
+
+footer .f-right h3{
+  color: white;
+  font-family: var(--open);
+font-size: 40px;
+margin-bottom: 30px;
+}
+
+
+footer .f-right i{
+  color: var(--primary-color);
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid white;
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+}
+
+
+footer .f-right p{
+  color: white;
+  font-family: var(--roboto);
+  font-size: 20px;
+}
+
+
+footer .f-bot p{
+ text-align: center;
+ margin-top: 40px;
+ color: white;
+ font-family: var(--open);
+ font-size: 27px;
+}
+
+footer .f-bot span{
+  color: var(--primary-color);
+}
+
+footer .round i{
+  width: 50px;
+  height: 50px;
+  background-color: #202020;
+  border-radius: 100%;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  right: -95%;
+  bottom: 15%;
+  font-size: 25px;
+  transition: all 0.5s linear;
+  border: 1px solid white;
+}
+
